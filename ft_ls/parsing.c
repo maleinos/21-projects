@@ -6,7 +6,7 @@
 /*   By: sdeidre <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 03:47:10 by sdeidre           #+#    #+#             */
-/*   Updated: 2019/08/22 21:12:06 by sdeidre          ###   ########.fr       */
+/*   Updated: 2019/08/23 20:06:49 by sdeidre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,10 @@ int			pars(t_flags *theo, int ac, char **av)
 		{
 			whichflag(t_flag *theo, av[i + 1])
 		}
-		if (av[i] == '-' && av[i + 1] -- '-')
-			error1(av[i + 1]);
+		if (av[i] == '-' && av[i + 1] == '-')
+			errors(av[i + 1], DOUBLE_DASH);
 		if (av[i] != '-')
-			error2(av[i])
-				return()
+			error2(av[i], NO_DASH);
 	}
 	return (-1);
 }
@@ -67,11 +66,18 @@ int			whichflag2(t_flag *theo, char *dora)
 	    errors(dora);
 }
 
-int			error1()
+int			errors(char *letter, int err)
 {
-	ft_putstr_fd('ft_ls: illegal option -- -\n
-			usage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]\n', 2);
-	exit(1);
+	if (err == DOUBLE_DASH)
+	{
+		ft_putstr_fd("ft_ls: illegal option -- -", 2);
+		ft_putstr_td("/nusage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]\n", 2);
+	}
+	if (err == NO_DASH)
+	{
+		ft_putstr_fd("ls: ", 2);
+		ft_putchar_fd(*letter, 2);
+		ft_putstr_fd(": No such file or directory", 2);
+	}
+	return (0);
 }
-
-int			error2()
