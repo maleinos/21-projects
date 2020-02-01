@@ -4,7 +4,7 @@
 
 Ex00 - проект называется evalexpr. Это один из самых сложных проектов во время отбора в мою Школу. Представляет из себя калькулятор написанный на языке Си. 
 
-Get_next_line - считывает файлы через файловый дескриптор.
+Get_next_line allow you to read a line ending with a newline character from a file descriptor. That project also gains a deeper understanding of allocations, whether they happen on the stack memory or in the heap memory, the manipulation and the life cycle of a buffer, the unexpected complexity implied in the use of one or many static variables.
 
 Sdeidre - проект называется fillit. Напоминает из себя головоломку-тетрис, выполняли мы его вместе с тиммейтом Bcharman. Дано определенное кол-во фигур, которые должны сложиться в максимально маленький квадрат.
 
