@@ -4,7 +4,7 @@
 
 Ex00 - проект называется evalexpr. Это один из самых сложных проектов во время отбора в мою Школу. Представляет из себя калькулятор написанный на языке Си. 
 
-Get_next_line allow you to read a line ending with a newline character from a file descriptor. That project also gains a deeper understanding of allocations, whether they happen on the stack memory or in the heap memory, the manipulation and the life cycle of a buffer, the unexpected complexity implied in the use of one or many static variables.
+Get_next_line allow you to read a line ending with a newline character from a file descriptor. That project also gains a deeper understanding of allocations, whether they happen on the stack memory or in the heap memory, the manipulation and the life cycle of a buffer, the unexpected complexity implied in the use of one or many static variables. The function has no memory leaks, all heap-allocated memory space is properly freed. By the way, I used my libft functions in that project (21-projects/get_next_line/libft/).
 
 Sdeidre - проект называется fillit. Напоминает из себя головоломку-тетрис, выполняли мы его вместе с тиммейтом Bcharman. Дано определенное кол-во фигур, которые должны сложиться в максимально маленький квадрат.
 
